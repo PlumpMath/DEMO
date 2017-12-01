@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Levels/LEVEL.gd" type="Script" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+
+[node name="Level" type="Node2D"]
+
+script/script = ExtResource( 1 )
+camfollowplayer = true
+
+[node name="LevelData" type="Node" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = false
+
+[node name="Background" type="TileMap" parent="."]
+
+mode = 0
+tile_set = null
+cell/size = Vector2( 8, 8 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+
+[node name="Entrances" type="Node2D" parent="."]
+
+[node name="Exits" type="Node2D" parent="."]
+
+[node name="Playfield" type="TileMap" parent="."]
+
+mode = 0
+tile_set = null
+cell/size = Vector2( 8, 8 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+
+[node name="Player" parent="Playfield" instance=ExtResource( 2 )]
+
+[node name="Camera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 10.0
+drag_margin/left = 0.1
+drag_margin/top = 0.1
+drag_margin/right = 0.1
+drag_margin/bottom = 0.1
+
+

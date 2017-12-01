@@ -1,0 +1,541 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://Graphics/OutsideTiles.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4, 4, 4, -4, 4, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4, 4, -4, -4, 4, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4, 4, -4, -4, 4, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4, 4, -4, -4, 4, -4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 4, 4, -4, -4, 4, -4 )
+
+[node name="Outside" type="Node"]
+
+[node name="Snow" type="Sprite" parent="."]
+
+transform/pos = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 8, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Snow"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snow/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="SnowDSnow" type="Sprite" parent="."]
+
+transform/pos = Vector2( 12, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 24, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowDSnow"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnowDSnow/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="DSnow" type="Sprite" parent="."]
+
+transform/pos = Vector2( 20, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DSnow"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DSnow/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="DSnowRock" type="Sprite" parent="."]
+
+transform/pos = Vector2( 28, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 40, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DSnowRock"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DSnowRock/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Rock" type="Sprite" parent="."]
+
+transform/pos = Vector2( 36, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 48, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="SnowL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 4, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 8, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SnowL/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -4, 4, 4, -4, 4, 4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="SnowR" type="Sprite" parent="."]
+
+transform/pos = Vector2( 12, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 16, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowR"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SnowR/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -4, 4, -4, -4, 4, 4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="SnowDSnowL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 20, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 24, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowDSnowL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnowDSnowL/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="SnowDSnowR" type="Sprite" parent="."]
+
+transform/pos = Vector2( 28, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SnowDSnowR"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnowDSnowR/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="DSnowRockL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 36, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 40, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DSnowRockL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DSnowRockL/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="DSnowRockR" type="Sprite" parent="."]
+
+transform/pos = Vector2( 44, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 48, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DSnowRockR"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DSnowRockR/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CRock" type="Sprite" parent="."]
+
+transform/pos = Vector2( 60, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CRock"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CRock/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CRockL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 52, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 56, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CRockL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CRockL/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -4, 4, 4, -4, 4, 4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="CRockR" type="Sprite" parent="."]
+
+transform/pos = Vector2( 68, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 72, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CRockR"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CRockR/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -4, 4, -4, -4, 4, 4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="CRockUL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 52, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 56, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CRockUL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CRockUL/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -4, 4, -4, -4, 4, -4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="CRockDL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 68, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 72, 8, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CRockDL"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CRockDL/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 4, 4, -4, -4, 4, -4 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="DCRock" type="Sprite" parent="."]
+
+transform/pos = Vector2( 84, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 88, 0, 8, 8 )
+
+[node name="DCRockL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 76, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 0, 8, 8 )
+
+[node name="DCRockR" type="Sprite" parent="."]
+
+transform/pos = Vector2( 92, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 0, 8, 8 )
+
+[node name="DCRockUL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 76, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 8, 8, 8 )
+
+[node name="DCRockDL" type="Sprite" parent="."]
+
+transform/pos = Vector2( 92, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 8, 8, 8 )
+
+[node name="Wall" type="Sprite" parent="."]
+
+transform/pos = Vector2( 100, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 16, 0, 8, 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/StaticBody2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BGWall" type="Sprite" parent="."]
+
+transform/pos = Vector2( 100, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="Roof" type="Sprite" parent="."]
+
+transform/pos = Vector2( 108, 4 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 8, 8, 8 )
+
+[node name="Garage" type="Sprite" parent="."]
+
+transform/pos = Vector2( 108, 12 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 16, 8, 8 )
+
+

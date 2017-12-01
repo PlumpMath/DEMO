@@ -1,0 +1,160 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://LevelObjects/warp.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Warp.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "Rotate"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("MiniPortals:transform/rot")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MiniPortals/MiniPortal:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MiniPortals/MiniPortal1:transform/rot")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MiniPortals/MiniPortal2:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MiniPortals/MiniPortal3:transform/rot")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+
+[node name="Warp" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+name = "Undefined"
+entrance = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BigPortal" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+region = true
+region_rect = Rect2( 8, 0, 16, 16 )
+
+[node name="MiniPortals" type="Node2D" parent="."]
+
+[node name="MiniPortal" type="Sprite" parent="MiniPortals"]
+
+transform/pos = Vector2( 0, -16 )
+texture = ExtResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+region = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="MiniPortal1" type="Sprite" parent="MiniPortals"]
+
+transform/pos = Vector2( 16, 0 )
+texture = ExtResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+region = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="MiniPortal2" type="Sprite" parent="MiniPortals"]
+
+transform/pos = Vector2( 0, 16 )
+texture = ExtResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+region = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="MiniPortal3" type="Sprite" parent="MiniPortals"]
+
+transform/pos = Vector2( -16, 0 )
+transform/rot = -90.0
+texture = ExtResource( 2 )
+modulate = Color( 1, 0, 0, 1 )
+region = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Rotate = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "Rotate"
+
+[node name="WarpTo" type="Label" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -64.0
+margin/top = -32.0
+margin/right = 64.0
+margin/bottom = -18.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Home"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
