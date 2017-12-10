@@ -18,7 +18,7 @@ extents = Vector2( 10, 29 )
 
 [node name="Level" instance=ExtResource( 1 )]
 
-bgm = null
+bgm = "res://Sound/Base.ogg"
 autoplaybgm = true
 
 [node name="Background" parent="."]

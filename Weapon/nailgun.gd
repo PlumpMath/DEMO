@@ -19,6 +19,7 @@ func _input(event):
 
 func timeout():
 	if (!get_parent().get_parent().get("frozen")):
+		get_node("SE").play("Nail")
 		var naili = nail.instance()
 		naili.set_global_rot(get_global_rot())
 		naili.set_global_pos(get_node("ShootPos").get_global_pos())

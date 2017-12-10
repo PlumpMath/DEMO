@@ -195,6 +195,7 @@ func _fixed_process(delta):
 	if (on_air_time < JUMP_MAX_AIRBORNE_TIME and jump and not prev_jump_pressed and not jumping and !frozen and !prevfrozen):
 		# Jump must also be allowed to happen if the character left the floor a little bit ago.
 		# Makes controls more snappy.
+		get_node("SE").play("Jump")
 		velocity.y = -JUMP_SPEED
 		jumping = true
 	
@@ -302,6 +303,7 @@ func unfreeze():
 	pass
 
 func dmg(dmg):
+	get_node("SE").play("Hurt")
 	hp-=dmg
 	Globals.set("HP",hp)
 	GAME.update_hp(hp)

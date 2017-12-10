@@ -5,12 +5,14 @@ extends Node2D
 # var b = "textvar"
 var cheatstring = ""
 var cheat = "BUMBUMBUM"
-
+var titlebgm = preload("res://Sound/Title.ogg")
 
 func _ready():
 	GAME.show_hp(false)
 	BGM.stop()
 	Globals.set("BGM",null)
+	BGM.set_stream(titlebgm)
+	BGM.play()
 	Globals.set("HP",100)
 	Globals.set("Direction",0)
 	Globals.set("ActiveWarps",[])

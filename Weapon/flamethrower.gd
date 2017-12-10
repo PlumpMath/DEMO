@@ -19,6 +19,7 @@ func _input(event):
 
 func timeout():
 	if (!get_parent().get_parent().get("frozen")):
+		get_node("SE").play("Fire")
 		var flamei = flame.instance()
 		flamei.set("direction",get_parent().get_parent().get("direction"))
 		if (Input.is_action_pressed("ui_up")):

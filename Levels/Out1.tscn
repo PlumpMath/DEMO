@@ -20,7 +20,7 @@ extents = Vector2( 10, 38 )
 
 [node name="Level" instance=ExtResource( 1 )]
 
-bgm = null
+bgm = "res://Sound/Outside.ogg"
 autoplaybgm = true
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]

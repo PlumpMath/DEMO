@@ -17,6 +17,7 @@ func _ready():
 
 func body_enter(body):
 	if (body.is_in_group("Player")):
+		get_node("SE").play("GetWep")
 		body.get("weapon")[weapon]["obtained"] = true
 		if (Globals.get("Weapons")!=null and !Globals.get("Weapons").empty()):
 			Globals.get("Weapons")[weapon] = true

@@ -23,15 +23,6 @@ Questioning this is not permitted.
 
 ==Notes==
 
-This game has "Interactive Soundscape" technology.
-
-The game thus lets you choose the music and sounds you feel most suitable via 
-playing it in the background using winamp (Other similar programs are usable but have worse UI)
-
-Thus if in need to fudge a review score, you can play the Yo Noid 2 soundtrack for a 10/10
-or you could play the soundtrack to Yoshi's new island to justify a 0/10 without even playing the game
-
-==
 
 Sometimes the soldier enemies will get very scared at your prescence and stop moving. 
 Even when you leave their cone of vision.
@@ -67,10 +58,12 @@ You bothered to find a secret in MY GAME! and that means a lot to me...
 
 Thanks if you played this. It means more than you could imagine.
 
+Source available at https://github.com/ElfEars/DEMO
+
 Feel free to use the code in any way you want. There's a lot of cool stuff for the aspiring godot metroidvania maker.
 
 This game is probably more fun to mod than play lol.
 
-I'd like to keep ownership of the art however. (Feel free to use it in fangames though)
-Those walk cycled were hard to draw! Expect to see them in my next """Great""" title.
+I'd like to keep ownership of the art and sounds however. (Feel free to use it in fangames though)
+Those walk cycles were hard to draw! Expect to see them in my next """Great""" title.
 

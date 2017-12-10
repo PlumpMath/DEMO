@@ -10,6 +10,7 @@ func _ready():
 
 func _input(event):
 	if (event.is_action_pressed("fire") and !get_parent().get_parent().get("frozen")):
+		get_node("SE").play("Saw")
 		var bladei = blade.instance()
 		bladei.set("direction",get_parent().get_parent().get("direction"))
 		if (Input.is_action_pressed("ui_up")):

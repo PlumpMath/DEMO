@@ -10,6 +10,7 @@ func _ready():
 
 func _input(event):
 	if (event.is_action_pressed("fire") and !get_parent().get_parent().get("frozen")):
+		get_node("SE").play("Pistol")
 		var pistoli = pistolbullet.instance()
 		pistoli.set_global_rot(get_global_rot())
 		pistoli.set_global_pos(get_node("ShootPos").get_global_pos())
