@@ -64,11 +64,6 @@ Feel free to use the code in any way you want. There's a lot of cool stuff for t
 
 This game is probably more fun to mod than play lol.
 
-<<<<<<< HEAD
-I'd like to keep ownership of the art and sounds however. (Feel free to use it in fangames though)
-Those walk cycles were hard to draw! Expect to see them in my next """Great""" title.
-=======
 I'd like to keep ownership of the art and music however. (Feel free to use it in fangames though)
 Those walk cycled were hard to draw! Expect to see them in my next """Great""" title.
->>>>>>> 2b62d1b7e8eea8ab0bbef92a67698502fc979f51
 
